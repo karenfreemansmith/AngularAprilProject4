@@ -6,17 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Foot in the Door';
+var ForumComponent = (function () {
+    function ForumComponent() {
     }
-    AppComponent = __decorate([
+    ForumComponent.prototype.ngOnInit = function () {
+    };
+    ForumComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            selector: 'app-forum',
+            templateUrl: './forum.component.html',
+            styleUrls: ['./forum.component.css']
         })
-    ], AppComponent);
-    return AppComponent;
+    ], ForumComponent);
+    return ForumComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.ForumComponent = ForumComponent;

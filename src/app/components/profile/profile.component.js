@@ -6,17 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Foot in the Door';
+var ProfileComponent = (function () {
+    function ProfileComponent() {
     }
-    AppComponent = __decorate([
+    ProfileComponent.prototype.ngOnInit = function () {
+    };
+    ProfileComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            selector: 'app-profile',
+            templateUrl: './profile.component.html',
+            styleUrls: ['./profile.component.css']
         })
-    ], AppComponent);
-    return AppComponent;
+    ], ProfileComponent);
+    return ProfileComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.ProfileComponent = ProfileComponent;
