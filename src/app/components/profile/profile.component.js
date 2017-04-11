@@ -7,7 +7,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require('@angular/core');
 var ProfileComponent = (function () {
-    function ProfileComponent() {
+    function ProfileComponent(route) {
+        var _this = this;
+        this.route = route;
+        this.name = "";
+        this.route.params.subscribe(function (params) { return _this.name = params.name; });
     }
     ProfileComponent.prototype.ngOnInit = function () {
     };

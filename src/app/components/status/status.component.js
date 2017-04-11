@@ -6,24 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var PostComponent = (function () {
-    function PostComponent(route) {
-        var _this = this;
-        this.route = route;
-        this.title = "";
-        this.body = "";
-        this.route.params.subscribe(function (params) { return _this.title = params.title; });
-        this.route.params.subscribe(function (params) { return _this.body = params.body; });
+var StatusComponent = (function () {
+    function StatusComponent() {
     }
-    PostComponent.prototype.ngOnInit = function () {
+    StatusComponent.prototype.ngOnInit = function () {
     };
-    PostComponent = __decorate([
+    StatusComponent = __decorate([
         core_1.Component({
-            selector: 'app-post',
-            templateUrl: './post.component.html',
-            styleUrls: ['./post.component.css']
+            selector: 'app-status',
+            inputs: ['name', 'status'],
+            templateUrl: './status.component.html',
+            styleUrls: ['./status.component.css']
         })
-    ], PostComponent);
-    return PostComponent;
+    ], StatusComponent);
+    return StatusComponent;
 }());
-exports.PostComponent = PostComponent;
+exports.StatusComponent = StatusComponent;

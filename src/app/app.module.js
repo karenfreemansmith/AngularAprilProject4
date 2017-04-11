@@ -21,6 +21,7 @@ var announcement_component_1 = require('./components/announcement/announcement.c
 var post_component_1 = require('./components/post/post.component');
 var update_component_1 = require('./components/update/update.component');
 var forum_component_1 = require('./components/forum/forum.component');
+var status_component_1 = require('./components/status/status.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -35,7 +36,8 @@ var AppModule = (function () {
                 announcement_component_1.AnnouncementComponent,
                 post_component_1.PostComponent,
                 update_component_1.UpdateComponent,
-                forum_component_1.ForumComponent
+                forum_component_1.ForumComponent,
+                status_component_1.StatusComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -43,12 +45,12 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 material_1.MaterialModule,
                 router_1.RouterModule.forRoot([
-                    { path: 'profile', component: profile_component_1.ProfileComponent },
+                    { path: 'profile/:name', component: profile_component_1.ProfileComponent },
                     { path: 'timeline', component: timeline_component_1.TimelineComponent },
                     { path: 'friends', component: friends_component_1.FriendsComponent },
                     { path: 'followers', component: followers_component_1.FollowersComponent },
                     { path: 'announcement', component: announcement_component_1.AnnouncementComponent },
-                    { path: 'post', component: post_component_1.PostComponent },
+                    { path: 'post/:title/:body', component: post_component_1.PostComponent },
                     { path: 'update', component: update_component_1.UpdateComponent },
                     { path: 'forum', component: forum_component_1.ForumComponent }
                 ])

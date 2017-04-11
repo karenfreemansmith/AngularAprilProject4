@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
@@ -16,6 +16,7 @@ import { AnnouncementComponent } from './components/announcement/announcement.co
 import { PostComponent } from './components/post/post.component';
 import { UpdateComponent } from './components/update/update.component';
 import { ForumComponent } from './components/forum/forum.component';
+import { StatusComponent } from './components/status/status.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ForumComponent } from './components/forum/forum.component';
     AnnouncementComponent,
     PostComponent,
     UpdateComponent,
-    ForumComponent
+    ForumComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,
@@ -35,12 +37,12 @@ import { ForumComponent } from './components/forum/forum.component';
     HttpModule,
     MaterialModule,
     RouterModule.forRoot([
-      { path: 'profile', component: ProfileComponent },
+      { path: 'profile/:name', component: ProfileComponent },
       { path: 'timeline', component: TimelineComponent },
       { path: 'friends', component: FriendsComponent },
       { path: 'followers', component: FollowersComponent },
       { path: 'announcement', component: AnnouncementComponent },
-      { path: 'post', component: PostComponent },
+      { path: 'post/:title/:body', component: PostComponent },
       { path: 'update', component: UpdateComponent },
       { path: 'forum', component: ForumComponent }
     ])
